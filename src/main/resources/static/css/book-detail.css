@@ -1,0 +1,66 @@
+.book {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+
+    height: 35vh;
+    width: 30vh;
+    border-radius: 2vh;
+
+    padding: 12vh;
+
+    background: #F05B64;
+
+    color: white;
+}
+
+.title {
+    position: absolute;
+    top: 2%;
+
+    font-family: 'Pacifico', cursive;
+}
+
+.author {
+    position: absolute;
+    bottom: 2%;
+}
+
+.purchase {
+    position: fixed;
+    bottom: 1.5vh;
+    left: 50%;
+    transform: translate(-50%);
+
+    color: black!important;
+
+    font-size: small!important;
+}
+
+.options {
+    position: fixed;
+    top: 15vh;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 5vw;
+    height: auto;
+}
+
+.options a {
+    margin: 1vh;
+    height: 50%;
+
+    padding: 1vh;
+    width: 10vw!important;
+    border: none;
+
+    color: #b7b7b7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #2d2d2d;
+    border-radius: 1vh;
+}

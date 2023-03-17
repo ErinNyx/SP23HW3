@@ -1,0 +1,11 @@
+#wrapper div, #col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 50%;
+}
+
+.title {
+    font-size: smaller;
+}

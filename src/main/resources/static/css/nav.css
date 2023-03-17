@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+body {
+    background: #F5F5F5;
+}
+
+#wrapper {
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 100vw;
+
+    top: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+*::-webkit-scrollbar {
+    width: 3px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+* {
+    font-family: 'Poppins';
+    font-size: 1.2em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+
+    margin: 0;
+    padding: 2vh;
+
+    background: #2d2d2d;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+    z-index: 999;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+    color: black;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: aquamarine;
+}
+
+.nav.left {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    font-weight: 999;
+    position: absolute;
+
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav.right {
+    position: absolute;
+
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav.right a {
+    margin-right: 5vh;
+}
+
+#wrapper {
+    overflow: hidden;
+    overflow-y: auto;
+}

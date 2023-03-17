@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+    <script>
+        async function Delete() {
+            const check = confirm('Are you sure you want to delete this book reference?');
+
+            // For some reason JS doesn't like when you use th:value so I have to use this workaround with the attribute
+            // list. BUT IT WORKS
+
+            if(check) await fetch('/book/delete-book/id=' + document.getElementById('delete').attributes.value.nodeValue, {
+                method: 'POST'
+            }).then(() => window.location.href = '/book/all');
+        }
+    </script>
+
+    <link rel="stylesheet" href="/css/book-detail.css">
+    <link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+<nav><a href="/" class="nav left" />Logo</a> <div class="nav right"><a href="/book/new-book">Add Books</a><a href="/book/all">View Books</a></div></nav>
+
+<!--This was the page I realised that I could use <notation /> for everyhing because th:text f---ing rules-->
+
+<div class="options"><a th:href="@{/book/update-book/id={id}(id=${book.id})}">Edit</a> <a th:text="Delete" id="delete" th:value="*{book.id}" onClick="Delete()" /></div>
+
+<div class="book">
+    <h1 class="title" th:text="*{book.title}" />
+    <p class="author">By: <a th:text="*{book.author}" /></p>
+</div>
+
+<a class="purchase">Buy it (ISBN: <b th:text="*{book.isbn}" />) today for only $ <b th:text="*{book.price}" />!</a>
+</body>
+</html>

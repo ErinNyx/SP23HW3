@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+<nav><a href="/" class="nav left" />Logo</a> <div class="nav right"><a href="/book/new-book">Add Books</a><a href="/book/all">View Books</a></div></nav>
+    <!--Why do you do things the way you do lmao
+    I think it's safe to say that everyone in this class including me are following the demo app for the backend as a guide
+    But I know enough front end to know that there are better ways! Just do this! No need to make it complex!
+    It gets the job done and is easier to style these days!-->
+
+    <form class="" action="/book/update" method="POST">
+      <input type="text" th:field="*{book.id}" th:placeholder="${book.id}" readonly />
+      <input type="text" th:field="*{book.title}" placeholder="Enter Book Title" th:value="${book.title}" required />
+      <input type="text" th:field="*{book.author}" placeholder="Enter Author" th:value="${book.author}" required />
+      <input type="text" th:field="*{book.isbn}" placeholder="Enter ISBN#" th:value="${book.isbn}" required />
+      <input type="number" th:field="*{book.price}" placeholder="Enter Price" th:value="${book.price}" required />
+      <input type="submit" value="Update Book" />
+    </form>
+</body>
+</html>

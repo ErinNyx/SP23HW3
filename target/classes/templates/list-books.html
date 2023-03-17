@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/list-books.css" />
+</head>
+<body>
+    <nav><a href="/" class="nav left" />Logo</a> <div class="nav right"><a href="/book/new-book">Add Books</a><a href="/book/all">View Books</a></div></nav>
+
+    <!--Fun fact! In ReactJS front end, you can just use some JS to get data from the back end and render the page based
+    on the data IN THE SAME FUNCTION AND IT'S CLEAN AND YOU CAN HAVE A LOADING BAR IN THE SAME FUNCTION AS WELL
+    can I use reactJS next time please pretty please I'll do anything
+
+    ALSO I DON'T LIKE TABLES NOT USING THEM t(-_-t)-->
+
+    <div id="wrapper">
+
+        <div id="col">
+            <h1 id="reference">Ref</h1>
+            <h1 id="title">Title</h1>
+            <h1 id="author">Author</h1>
+            <h1 id="isbn">ISBN</h1>
+            <h1 id="price">Price</h1>
+        </div>
+
+        <div th:each="book : ${bookList}">
+            <label> <a th:href="@{/book/id={id}(id=${book.id})}" th:text=" ${book.id}" > </a></label>
+            <a class="title" th:text=" ${book.title}"></a>
+            <a th:text=" ${book.author}"></a>
+            <a th:text=" ${book.isbn}"></a>
+            $<a th:text=" ${book.price}"></a>
+        </div>
+    </div>
+</body>
+</html>
