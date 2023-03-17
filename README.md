@@ -15,3 +15,5 @@ also make sure you run this in chrome or that confirm message will not show up) 
 if yes, the JS function will POST to the server and then redirect the user
 
 that's it!
+
+PS I'm not entirely sure the sizing is correct for all view ports so if it looks a little wonky please lmk and we can view it on my laptop ty <3
